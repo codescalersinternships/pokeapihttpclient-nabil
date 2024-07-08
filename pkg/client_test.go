@@ -7,7 +7,7 @@ import (
 	"time"
 )
 
-func Test_GetPokemonByName(t *testing.T) {
+func TestGetPokemonByName(t *testing.T) {
 	t.Run("valid req", func(t *testing.T) {
 		client := NewClient(time.Duration(1) * time.Second)
 		poke, err := client.GetPokemonByname(context.Background(), "pikachu")

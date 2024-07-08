@@ -32,7 +32,7 @@ func (c *Client) GetPokemonByname(ctx context.Context, pokemonName string) (Poke
 	return poke, nil
 }
 
-// GetPokemonByname is a method of Client struct, used to fetch pokemon by its name field
+// GetPokemonList is a method of Client struct, used to fetch number of pokemons
 func (c *Client) GetPokemonList(ctx context.Context, limit, offset int) ([]string, error) {
 	var pokeNamesList []string
 	request, err := http.NewRequestWithContext(ctx, http.MethodGet, "https://pokeapi.co/api/v2/pokemon?limit="+strconv.Itoa(limit)+"&offset="+strconv.Itoa(offset), nil)

@@ -1,5 +1,6 @@
 package client
 
+// Pokemon class is used as model to parse response data for one pokemon
 type Pokemon struct {
 	ID             int    `json:"id"`
 	Name           string `json:"name"`
@@ -8,6 +9,8 @@ type Pokemon struct {
 	Order          int    `json:"order"`
 	Weight         int    `json:"weight"`
 }
+
+// Pokemon class is used as model to parse response data for array of pokemons
 type pokeList struct {
 	Results []struct {
 		Name string `json:"name"`
